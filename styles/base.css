@@ -236,3 +236,77 @@
 	background-image: linear-gradient(bottom, #507e8d 0%, #71b3c8 100%);
 	opacity: 1;
 }
+
+/* Footer */
+.ui-footer {
+	height: 3.5em;
+	overflow:hidden;
+	border-top: 1px solid #7c7c67;
+	text-align:center;
+	-moz-box-shadow:0px -1px 0px #58584a;
+	-webkit-box-shadow:0px -1px 0px #58584a;
+	box-shadow:0px -1px 0px #58584a;
+	background:#5c5c4c;
+	background:-moz-linear-gradient(top,#f50000 0%,#f50000 50%,#bb0000 50%,#bb0000 100%);
+	background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#f50000),color-stop50%,#f50000),color-stop(50%,#bb0000),color-stop(100%,#bb0000));
+	background:-webkit-linear-gradient(top, #f50000 0%,#f50000 50%,#bb0000 50%,#bb0000 100%);
+	background:-o-linear-gradient(top, #f50000 0%,#f50000 50%,#bb0000 50%,#bb0000 100%);
+	background:-ms-linear-gradient(top, #f50000 0%,#f50000 50%,#bb0000 50%,#bb0000 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f50000',endColorstr='#bb0000',GradientType=0);
+	background:linear-gradient(top, #f50000 0%,#f50000 50%,#bb0000 50%,#bb0000 100%);
+}
+.ui-footer .ui-btn {
+	float:left;
+	width:25%;
+	height:56px;
+	border-width:0 0 0 0; 
+	border-style: solid;
+	border-color:#7c7c67;
+	margin:0;
+	font-size:0.75em;
+	color:#d0cdba;
+	text-shadow:0px -1px 0px #3d3d32;
+	-moz-box-shadow:0 0 0;
+	-webkit-box-shadow:0 0 0;
+	box-shadow:0 0 0;
+	-moz-border-radius:0;
+	-webkit-border-radius:0;
+	border-radius:0;
+}
+.ui-footer .ui-btn-down-a{
+	background-color:rgba(255,255,255,0.1)!important
+}
+.ui-footer .ui-btn span.ui-btn-inner{
+	background:none;
+	height:56px;
+	-moz-border-radius:0;
+	-webkit-border-radius:0;
+	border-radius:0;
+	border-right:1px solid #7c7c67;
+	display:block;
+	-moz-box-shadow:
+	inset -1px 0 0 #49493d;
+	-webkit-box-shadow:inset -1px 0 0 #49493d;
+	box-shadow:inset -1px 0 0 #49493d
+}
+.ui-footer .ui-btn span.ui-btn-text{
+	padding:31px 0 0 0;
+	display:block
+}
+.ui-footer .ui-btn#btn-menu{
+	background:url(images/ico-menu.png) no-repeat center 5px
+}
+.ui-footer .ui-btn#btn-book{
+	background:url(images/ico-book.png) no-repeat center 5px
+}
+.ui-footer .ui-btn#btn-contact{
+	background:url(images/ico-contact.png) no-repeat center 5px
+}
+.ui-footer .ui-btn#btn-map{
+	background:url(images/ico-map.png) no-repeat center 5px;border:0
+}.
+ui-footer .ui-btn#btn-map span{border:0}
+#jqm-page.ui-dialog{background-position:0 0}
+.ui-dialog .ui-body-c{background:#cfcebe none;overflow:hidden}
+.ui-dialog .header{display:none!important}
+.ui-dialog .ui-body-c img{width:100%}
