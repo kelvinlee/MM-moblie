@@ -19,10 +19,11 @@
 
 /* Swatches */
 /* MM */
-.ui-bar-mm .ui-header .ui-title,.ui-bar-mm .ui-footer .ui-title {
-	margin-left:10px;
+.ui-bar-mm #ui-title {
+	margin-left:50px;
 	text-align: left; 
-	font-size: 12px;
+	line-height: 26px;
+	height:26px;
 }
 .ui-bar-mm {
 	border: 1px solid 		#bb0000 /*{b-bar-border}*/;
