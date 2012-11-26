@@ -21,7 +21,8 @@
 /* MM */
 .ui-bar-mm .ui-header .ui-title,.ui-bar-mm .ui-footer .ui-title {
 	margin-left:10px;
-	text-align: left;
+	text-align: left; 
+	font-size: 12px;
 }
 .ui-bar-mm {
 	border: 1px solid 		#bb0000 /*{b-bar-border}*/;
