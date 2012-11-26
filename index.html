@@ -1,0 +1,90 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>Media Markt</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />	
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+<!--link rel="stylesheet" href="styles/jquery.mobile-1.2.0.min.css" />
+<link rel="stylesheet" href="styles/jquery.mobile.structure-1.2.0.min.css" />
+<link rel="stylesheet" href="styles/jquery.mobile.theme-1.2.0.min.css" /-->
+
+<link rel="stylesheet" href="styles/jquery.mobile-1.2.0.css" />
+<link rel="stylesheet" href="styles/base.css" />
+
+<script type="text/javascript" src="scripts/lib/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="scripts/lib/jquery.mobile-1.2.0.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.ui.totop.js"></script>
+<script type="text/javascript" src="scripts/jquery.carousel.js"></script>
+<script>
+	jQuery(document).ready(function(){
+		// To top plugin
+		jQuery().UItoTop({ scrollSpeed: 200});
+
+	});
+	var startPageCarousel = new Carousel();
+	$(function () {
+		startPageCarousel.orderItems = function (items) {
+			items.splice(0, 0, items.pop());
+		};
+		startPageCarousel.init($('#start-page-carousel'), 240, 20, 0, 0.3);
+		startPageCarousel.render();
+		$(window).bind('resize', startPageCarousel.arrange);
+		$('#carousel-container').bind('swipeleft', startPageCarousel.slideNext);
+		$('#carousel-container').bind('swiperight', startPageCarousel.slidePrev);
+	});
+	startPageCarousel.addItem({ caption: "Construction products", url: "/us/products/", imageFileNormal: "images/ad1.jpg", imageFileHighResolution: "images/ad1.jpg", imageFileWidth: 240, imageFileHeight: 235, hasSize: false });
+	startPageCarousel.addItem({ caption: "Construction products", url: "/us/products/", imageFileNormal: "images/ad2.jpg", imageFileHighResolution: "images/ad2.jpg", imageFileWidth: 240, imageFileHeight: 235, hasSize: false });
+	startPageCarousel.addItem({ caption: "Construction products", url: "/us/products/", imageFileNormal: "images/ad3.jpg", imageFileHighResolution: "images/ad3.jpg", imageFileWidth: 240, imageFileHeight: 235, hasSize: false });
+	startPageCarousel.addItem({ caption: "Construction products", url: "/us/products/", imageFileNormal: "images/ad4.jpg", imageFileHighResolution: "images/ad4.jpg", imageFileWidth: 240, imageFileHeight: 235, hasSize: false });
+	startPageCarousel.addItem({ caption: "Construction products", url: "/us/products/", imageFileNormal: "images/ad5.jpg", imageFileHighResolution: "images/ad5.jpg", imageFileWidth: 240, imageFileHeight: 235, hasSize: false });
+</script>
+</head> 
+<body>
+<div data-role="page" id="home">
+	<div data-role="header" data-theme="mm">
+		<h1><img src="images/logo.png" alt="MediaMarkt 万得城电器"></h1>
+		<!-- <h1>MediaMarkt 万得城电器</h1> -->
+		<!-- <a href="login.html" rel="external">Login</a> -->
+	</div><!-- /header -->
+	<div data-role="content" data-theme="d">	
+		<div id="search" style="padding:10px 15px;"><input type="search" name="password" id="search" placeholder="Search..." value="" /></div>
+		<div id="ad">
+			<script id="carousel-item-template" type="text/x-jquery-tmpl">
+   				<a class="ui-shadow ui-link-inherit carousel-item" href="${url}">
+        		{{if hasSize }}
+            		<img src="${imageFileNormal}" data-2x-url="${imageFileHighResolution}" alt="" class="image retina" width="${imageFileWidth}" height="${imageFileHeight}" />
+       			{{else}}
+            		<img src="${imageFileNormal}" data-2x-url="${imageFileHighResolution}" alt="" class="image retina" style="max-width: ${imageFileWidth}px; max-height: ${imageFileHeight}px;" />
+        		{{/if}}
+				<div class="caption" style="display:none">${caption}</div>
+				</a>
+			</script>
+			<div id="carousel-container">
+				<div id="start-page-carousel"></div>
+				<ol id="indicators"></ol>
+				<a id="prev"></a>
+				<a id="next"></a>
+			</div>		
+		</div>
+		<div id="navigation" style="padding:10px 15px;">
+			<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="f">
+				<li><a href="category.html" data-transition="slide"rel="external">Phones and Navigation (Sum)</a></li>
+				<li><a href="category.html" data-transition="slide">Computer Equipment (Sum)</a></li>
+				<li><a href="category.html" data-transition="slide">Office Equipment (Sum)</a></li>
+				<li><a href="category.html" data-transition="slide">Digital Products (Sum)</a></li>
+				<li><a href="category.html" data-transition="slide">TV & Home AV (Sum)</a></li>
+				<li><a href="category.html" data-transition="slide">Home & Personal Care (Sum)</a></li>
+				<li><a href="category.html" data-transition="slide">Kitchen & Bath (Sum)</a></li>
+				<li><a href="category.html" data-transition="slide">Major & Bath (Sum)</a></li>
+				<li><a href="category.html" data-transition="slide">Accessories (Sum)</a></li>			
+			</ul>		
+		</div>
+	</div><!-- /content -->
+	<div data-role="footer" data-theme="mm" data-position="fixed">
+		<p>Home | About Us | Help | T&C | Privacy<p/>
+		<p>ICP Number | Full Version | Chinese Version</p><p>400-6088-188</p>	
+	</div><!-- /footer -->	
+</div><!-- /page -->
+</body>
+</html>
