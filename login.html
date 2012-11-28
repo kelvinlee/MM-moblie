@@ -4,33 +4,32 @@
 <title>Media Markt - login</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />	
 <meta name="viewport" content="width=device-width, initial-scale=1"> 
-
-<!--link rel="stylesheet" href="styles/jquery.mobile-1.2.0.min.css" />
-<link rel="stylesheet" href="styles/jquery.mobile.structure-1.2.0.min.css" />
-<link rel="stylesheet" href="styles/jquery.mobile.theme-1.2.0.min.css" /-->
-
-<link rel="stylesheet" href="styles/jquery.mobile-1.2.0.css" />
-
-<link rel="stylesheet" href="styles/base.css" />
-<link rel="stylesheet" href="styles/form.css" />
-<link rel="stylesheet" href="styles/jquery.itextsuggest.css" media="screen">
-
-<script type="text/javascript" src="scripts/lib/jquery-1.8.2.min.js"></script>
-<script type="text/javascript" src="scripts/lib/jquery.mobile-1.2.0.min.js"></script>
-<script type="text/javascript" src="scripts/jquery.ui.totop.js"></script>
- <script type="text/javascript" src="scripts/jquery.itextsuggest.js"></script>
-<script type="text/javascript" src="scripts/jquery.itextclear.js"></script>
-<script type="text/javascript" src="scripts/base.js"></script>
-<script type="text/javascript">
-  $(document).ready(function(){
-  	jQuery().UItoTop({ scrollSpeed: 200});
-    $('input[type=password], input[type=email]', '.form').iTextClear();
-});  
-</script>
 </head> 
 <body>
-<div data-role="page" id="login">
-	<div data-role="header" data-theme="b">
+<div data-role="page" id="login" data-overlay-theme="mm">
+	<div data-role="header" data-theme="d">
+		<h1>User Login</h1>
+	</div><!-- /header -->
+	<div data-role="content" data-theme="d">
+		<form class="form has-validation">
+            <div class="clearfix">
+				<label for="form-email" class="form-label">Email Address</label>
+				<div class="form-input"><input type="email" id="form-email" required="required" placeholder="A valid email address" /></div>
+            </div>
+            <div class="clearfix">
+				<label for="form-email" class="form-label">Password</label>
+				<div class="form-input"><input type="password" id="form-password" required="required" placeholder="Enter your password" /></div>
+            </div>           
+            <div class="form-action clearfix">
+                <button type="submit" data-role="button" data-theme="d">Login</button>
+            </div>
+            <p>You don't have an account? Please visit our website full version to:<br/><a href="https://shop.mediamarkt.cn/login" rel="external" target="_blank">Create a New Account</a></p>
+        </form>	
+	</div><!-- /content -->	
+</div><!-- /page -->
+</body>
+</body>
+</html>="header" data-theme="b">
 		<h1>User Login</h1>
 	</div><!-- /header -->
 	<div data-role="content" data-theme="d">

@@ -1,0 +1,211 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>Media Markt</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />	
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
+<!--link rel="stylesheet" href="styles/jquery.mobile-1.2.0.min.css" />
+<link rel="stylesheet" href="styles/jquery.mobile.structure-1.2.0.min.css" />
+<link rel="stylesheet" href="styles/jquery.mobile.theme-1.2.0.min.css" /-->
+
+<link rel="stylesheet" href="styles/jquery.mobile-1.2.0.css" />
+<link rel="stylesheet" href="styles/base.css" /> 
+<link rel="stylesheet" href="styles/grid.css" /> 
+
+<script type="text/javascript" src="scripts/lib/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="scripts/lib/jquery.mobile-1.2.0.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.ui.totop.js"></script>
+<script type="text/javascript" src="scripts/jquery.carousel.js"></script>
+<script type="text/javascript" src="scripts/jquery.itextsuggest.js"></script>
+<script type="text/javascript" src="scripts/jquery.itextclear.js"></script>
+<script type="text/javascript" src="scripts/jquery.menus.js"></script>
+<script type="text/javascript" src="scripts/base.js"></script>
+<script>
+	jQuery(document).ready(function(){ 
+		setTimeout(function(){
+			autoplayIMG();
+		}, 5000); 
+		$("[name=select-color] a").click(function(){
+			$(this).addClass("on").siblings().removeClass("on");
+			return false;
+		});
+		$(".product-table tr").each(function(){
+			 $("td:first",this).addClass("attrib");
+		});
+		createTab();
+	});
+	function createTab() {
+		var $e = $(".tabs"); 
+		$e.find(">ul>li a").click(function(){
+			$e.find(".current").removeClass("current");
+			$(this).addClass("current");
+			$e.find(">section>section").hide();
+			$e.find(">section>section").eq($(this).parent().index()).show();
+		});
+	}
+	function autoplayIMG() {
+		var $e = $("#indicators");
+		var $s = $e.find(".selected").parent(); 
+		if ($s.index()==$e.find("li").length-1) {
+			$e.find("li:first a").click();
+		}else{
+			$s.next().find("a").click();
+		}
+		setTimeout(function(){
+			autoplayIMG();
+		}, 5000);
+	}
+	$("#login").live("pagecreate",function(){
+		 $('input[type=password], input[type=email]', '.form').iTextClear();
+	});	
+	/*
+var startPageCarousel = new Carousel();
+	$(function () {
+		startPageCarousel.orderItems = function (items) {
+			items.splice(0, 0, items.pop());
+		};
+		startPageCarousel.init($('#start-page-carousel'), 140, 0, 0, 0.3);
+		startPageCarousel.render();
+		$(window).bind('resize', startPageCarousel.arrange);
+		$('#carousel-container').bind('swipeleft', startPageCarousel.slideNext);
+		$('#carousel-container').bind('swiperight', startPageCarousel.slidePrev);
+	});
+	startPageCarousel.addItem({ caption: "Title", url: "/url/", imageFileNormal: "images/ad1.jpg", imageFileHighResolution: "images/ad1.jpg", imageFileWidth: 150, imageFileHeight: 150, hasSize: false });
+	startPageCarousel.addItem({ caption: "Title", url: "/url/", imageFileNormal: "images/ad2.jpg", imageFileHighResolution: "images/ad2.jpg", imageFileWidth: 150, imageFileHeight: 150, hasSize: false });
+	startPageCarousel.addItem({ caption: "Title", url: "/url/", imageFileNormal: "images/ad3.jpg", imageFileHighResolution: "images/ad3.jpg", imageFileWidth: 150, imageFileHeight: 150, hasSize: false }); 
+*/
+</script>
+</head> 
+<body> 
+<div data-role="page" id="home"> 
+	<div id="ui-header" data-role="header" data-theme="mm"> 
+		<h1>HTC MOBILE PHONE Z710E:GREY</h1>
+		<a id="ui-back" id="gn_hdr_lnkHome" data-ajax="false" data-rel="back"><img src="images/backbtn-back.png" alt="&lt;&lt;" /></a>
+	</div><!-- /header -->
+	<div data-role="content" data-theme="d">
+		<div id="search" style="padding:0px 15px;">
+		<div class="ui-input-search ui-shadow-inset ui-btn-corner-all ui-btn-shadow ui-icon-searchfield ui-body-d">
+			<form id="searchform" name="searchform" action="list.html" method="post">
+			<input type="text" id="newsearch" name="newsearch" data-mini="true" class="nojqmb" placeholder="I am looking for..." /> 
+			<a href="#" id="btn-new-search" class="ui-input-clear ui-btn ui-btn-corner-all ui-fullsize ui-btn-icon-notext"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">clear text</span><span class="ui-icon ui-icon-search ui-icon-shadow">&nbsp;</span></span></a>
+			</form>
+		</div> 
+		</div>
+		<div id="ad" style="width:100%" class="clearfix">
+		<ul style="margin:0px;padding:0px;list-style:none;">
+		<li>
+			<div id="product-info-img" name="product-info-img" class="product-info-img clearfix" style="">
+				<div style="width:auto; padding:5px;">
+					<img name="product-img" src="images/iphone.jpg" />
+				</div>
+				<p class="ui-new-price clearfix"><span>Price: </span><span class="price">2299.-</span></p>
+			</div>
+			<div id="product-info" class="product-info">
+				<h3>HTC MOBILE PHONE Z710E:GREY</h3>
+				<p name="note" class="ui-li-desc ui-new-red">Mobile phone only, suitable for China Mobile/Unicom users. 1 item per customer. Online payment only.</p>
+				<p>ID: 100102850</p>
+				<p name="select-color" class="ui-new-color">Color: <a class="bg-white on"></a><a class="bg-black"></a></p>
+				
+				<p>Quantity: <select name="Quantity" id="Quantity" data-native-menu="false" data-mini="true">
+						<option value="1" selected="true">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+			</select></p> 
+			<p class="ui-new-addtocart-p"><a name="addtocart" class="ui-new-addtocart clearfix">Add to Cart</a></p>
+			</div>
+		</li>
+		</ul>
+		<dl id="checkout_bank_modes_dl" class="background_add">
+		<a href="http://home.mediamarkt.cn/mmcnstorefront/services/extendedwarranty" target="_blank"><dt class="left">Media Markt Extended Warranty Services</dt></a>
+		<dt class="left">
+				<input type="checkbox" name="extend_warranty_checkboxs" id="100123262" value="100123262" data-mini="true">
+				<label for="100123262">1&nbsp;Year EWS&nbsp;&nbsp;¥198.00</label>
+			</dt>
+			<dd></dd>
+		</dl>
+		</div> 
+		<div id="prouduct" class="container_12 clearfix">  
+			<section class="tabs grid_12 leading">
+                <ul class="clearfix grid_bg">
+                    <li><a href="#" class="current">Product Details</a></li>
+                    <li><a href="#" class="">Purchase</a></li> 
+                </ul>
+                <section>
+                    <section class="clearfix" style="display: block;">
+                        <header class="grid_12 alpha omega">
+                            <h2>Product Details</h2>
+                        </header>
+                        <div class="grid_12 alpha">
+                            <table class="full product-table">  
+                                <tbody>  
+                                    <tr>  
+                                        <td>Type</td>
+                                        <td>Smart Phones</td>
+                                    </tr>
+                                    <tr>  
+                                        <td>Network</td>
+                                        <td>WCDMA/GSM</td>
+                                    </tr>
+                                    <tr>  
+                                        <td>CPU</td>
+                                        <td>Qualcomm MSM8260 Dual-core CPU</td>
+                                    </tr>
+                                    <tr>  
+                                        <td>Operating System</td>
+                                        <td>Android</td>
+                                    </tr>
+                                    <tr>  
+                                        <td>Additional Functions</td>
+                                        <td>Input Mode / Input Method / Call Log / SMS / MMS / Recording Function / Themes / Standby Picture / Theme Menu/Ring Tone Caller ID/Calendar Function / Alarm Clock Function / Calculator</td>
+                                    </tr>
+                                    <tr>  
+                                        <td>ROM</td>
+                                        <td>1 GB</td>
+                                    </tr>
+                                    <tr>  
+                                        <td>MP3 Ringtone</td>
+                                        <td>Yes</td>
+                                    </tr>
+                                    <tr>  
+                                        <td>Touchscreen</td>
+                                        <td>Yes</td>
+                                    </tr>
+                                </tbody>  
+                            </table>
+                        </div> 
+                    </section>
+                    <section class="clearfix" style="display: none;">
+                        <header class="grid_12 alpha omega">
+                            <h2>Purchase</h2>
+                        </header>
+                    </section> 
+                </section>
+            </section>
+		</div>
+		<div id="content-footer" class="footer">
+			<div class="home-call">
+				<a href="tel:4006088188" class="phone">Hotline: 400-6088-188</a>
+			</div>
+      		<div class="foot-legal">
+				<a href="http://home.mediamarkt.cn/mmcnstorefront/aboutus" target="_blank">About Us</a> |
+				<a href="http://home.mediamarkt.cn/mmcnstorefront/services" target="_blank">Help</a> |
+				<a href="http://home.mediamarkt.cn/mmcnstorefront/home/terms" target="_blank">Terms & Conditions</a> |
+        		<a href="http://home.mediamarkt.cn/mmcnstorefront/home/privacy" target="_blank">Privacy Policy</a>
+      		</div>
+      		<div class="copyright">
+        		<a target="_blank" href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&entyId=2011123015063460">沪ICP备11003484号</a> |
+        		<a target="_blank" href="http://www.mediamarkt.cn">Full Site</a> |
+        		<a target="_blank" href="??/cn">Chinese Version</a>
+      		</div>			
+		</div>		
+	</div><!-- /content -->
+	<div id="foot-list" data-role="footer" data-theme="mm" data-position="fixed" data-id="footer">
+			<a href="index.html" id="btn-menu" rel="external">Home</a>
+			<a href="login.html" id="btn-book" data-rel="dialog" data-transition="slidedown">Login</a>
+			<a name="my-bag" href="" id="btn-contact">Cart</a>
+			<a href="http://home.mediamarkt.cn/mmcnstorefront/home/contact" id="btn-map" rel="external" target="_blank">Contact Us</a>	
+	</div><!-- /footer -->	
+</div><!-- /page -->
+</body>
+</html>
